@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#evtKeyPressed" prefHeight="680.0" prefWidth="1030.0" style="-fx-background-color: black;" stylesheets="@estilo/Estilo.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalhocg.TelaPrincipalController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#020202, #2f2f2f);" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutY="630.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <JFXButton onAction="#evtAbrir" prefWidth="85.0" style="-fx-background-color: #025355; -fx-background-radius: 5em;" text="Abrir" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#evtDesfazer" prefWidth="85.0" style="-fx-background-color: #025355; -fx-background-radius: 5em;" text="Desfazer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#evtLimpar" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: 5em;" text="Limpar" textFill="#025355">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="imageviewlogo" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutY="32.0" text="3   Krupique" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="32.0" text="D" textFill="#025355">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="10.0" layoutY="110.0" prefHeight="141.0" prefWidth="280.0" style="-fx-border-color: #025355;" AnchorPane.topAnchor="110.0">
+               <children>
+                  <Label layoutX="1.0" prefWidth="200.0" text="Projeções" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="rdbtParalela" layoutX="1.0" layoutY="20.0" onAction="#evtProjecaoParalela" style="-jfx-selected-color: #025355;" text="Paralela" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdbtCavaleira" layoutX="17.0" layoutY="47.0" onAction="#evtProjecaoCavaleira" style="-jfx-selected-color: #025355;" text="Cavaleira" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="52.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdbtCabinet" layoutX="12.0" layoutY="72.0" onAction="#evtProjecaoCabinet" style="-jfx-selected-color: #025355;" text="Cabinet" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="79.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdbtPerspectiva" layoutX="21.0" layoutY="132.0" onAction="#evtProjecaoPerspectiva" style="-jfx-selected-color: #025355;" text="Perspectiva" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="106.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXSlider fx:id="sliderPespec" layoutX="113.0" layoutY="94.0" majorTickUnit="100.0" max="200.0" onMouseDragged="#evtSliderPerspec" showTickLabels="true" value="100.0" AnchorPane.topAnchor="106.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="259.0" prefHeight="83.0" prefWidth="280.0" style="-fx-border-color: #025355;">
+               <children>
+                  <Label layoutY="5.0" text="Exibição" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkFaces" checkedColor="#025355" layoutX="150.0" layoutY="28.0" onAction="#evtSelectCheckBox" text="Exibir faces ocultas" textFill="WHITE" unCheckedColor="#025355" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="25.0" />
+                  <JFXRadioButton fx:id="rdShading" layoutX="14.0" layoutY="39.0" onAction="#evtExibirShading" style="-jfx-selected-color: #025355;" text="Sombreamento" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="52.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdAramado" layoutX="14.0" layoutY="27.0" onAction="#evtExibirAramado" style="-jfx-selected-color: #025355;" text="Aramado" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneIluminacao" layoutX="10.0" layoutY="413.0" prefHeight="189.0" prefWidth="280.0" style="-fx-border-color: #025355;">
+               <children>
+                  <Label layoutY="5.0" text="Iluminação" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXColorPicker fx:id="corLuz" layoutX="16.0" layoutY="49.0" onAction="#evtCorLuz" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="47.0" />
+                  <Label layoutX="14.0" layoutY="36.0" text="Cor da Luz" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="88.0" text="Cor do Objeto" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="77.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXColorPicker fx:id="corObjeto" layoutX="17.0" layoutY="115.0" onAction="#evtCorObjeto" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="99.0" />
+                  <Label layoutX="23.0" layoutY="134.0" text="Cor do Ambiente" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="130.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXColorPicker fx:id="corAmbiente" layoutX="17.0" layoutY="163.0" onAction="#evtCorAmbiente" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="152.0" />
+                  <Label layoutX="127.0" layoutY="26.0" text="Intensidade da Luz" textFill="WHITE" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="157.0" layoutY="78.0" text="Intensidade do Objeto" textFill="WHITE" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="77.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="168.0" layoutY="131.0" text="Intensidade do Ambiente" textFill="WHITE" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="130.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXSlider fx:id="sliderLuz" layoutX="128.0" layoutY="54.0" majorTickUnit="100.0" max="200.0" onMouseDragged="#evtsliderLuz" showTickLabels="true" value="100.0" AnchorPane.leftAnchor="127.0" />
+                  <JFXSlider fx:id="sliderObjeto" layoutX="128.0" layoutY="106.0" majorTickUnit="100.0" max="200.0" onMouseDragged="#evtsliderObjeto" showTickLabels="true" value="100.0" AnchorPane.leftAnchor="127.0" />
+                  <JFXSlider fx:id="sliderAmbiente" layoutX="128.0" layoutY="159.0" majorTickUnit="100.0" max="200.0" onMouseDragged="#evtsliderAmbiente" showTickLabels="true" value="100.0" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="159.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneMetodo" layoutX="10.0" layoutY="350.0" prefHeight="55.0" prefWidth="280.0" style="-fx-border-color: #025355;" AnchorPane.leftAnchor="10.0">
+               <children>
+                  <Label layoutY="5.0" text="Método de Sombremento" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="rdFlat" layoutX="17.0" layoutY="30.0" onAction="#evtCheckFlat" style="-jfx-selected-color: #025355;" text="Flat" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdGourard" layoutX="90.0" layoutY="26.0" onAction="#evtcheckGourard" style="-jfx-selected-color: #025355;" text="Gourard" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdPhong" layoutX="187.0" layoutY="26.0" onAction="#evtcheckPhong" style="-jfx-selected-color: #025355;" text="Phong" textFill="WHITE" AnchorPane.leftAnchor="187.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="680.0" fitWidth="680.0" onMouseDragged="#evtDragged" onMousePressed="#evtPressed" onScroll="#evtScroll" pickOnBounds="true" preserveRatio="true" />
+            <VBox fx:id="vbox" layoutX="690.0" prefHeight="690.0" prefWidth="50.0" style="-fx-background-color: #DFDFDF;">
+               <children>
+                  <ImageView fx:id="btViewPort" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#evtAbrirTelaViewPort" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="vboxMenuSide" layoutX="460.0" prefHeight="690.0" prefWidth="260.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="270.0" spacing="5.0" style="-fx-background-color: #DFDFDF;">
+                     <children>
+                        <ImageView fx:id="btViewPort1" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#evtFecharViewPort" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon.png" />
+                           </image>
+                        </ImageView>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="210.0" style="-fx-background-color: #DFDFDF;">
+                           <children>
+                              <Label text="Baixo">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="viewportcima" fitHeight="210.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/background_viewport.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="10.0" layoutY="20.0" text="Cima">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="viewportfrente" fitHeight="210.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/background_viewport.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="10.0" layoutY="257.0" text="Lado">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="viewportlado" fitHeight="210.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/background_viewport.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <JFXButton fx:id="btLuz" layoutX="134.0" layoutY="116.0" onMouseDragged="#evtDraggedBtLuz" onScroll="#evtLuzScroll" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 15em;" text="Luz">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
