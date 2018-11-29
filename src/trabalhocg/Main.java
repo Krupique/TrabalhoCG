@@ -27,6 +27,7 @@ public class Main extends Application {
         stage.setResizable(false);
         stage.setTitle("Trabalho CG: Henrique K. Secchi, Wellington Takano, Caio Felipe");
         stage.show();
+        //System.out.println("Teste");
     }
 
     /**
