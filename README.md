@@ -1,4 +1,7 @@
 # Projeto de Computação Gráfica 3DKrupique
+
+O objetivo deste projeto foi criar um renderizador 3D a partir do zero para aplicar os conhecimentos sobre os assuntos de Álgebra Linear, Geometria Analítica e Programação.
+
 Este trabalho foi desenvolvido por Henrique Krupck Secchi como trabalho prático para a disciplina de Computação Gráfica do curso de Ciência da Computação.
 
 O trabalho foi desenvolvido inteiramente em Java na sua versão 8 e utilizando o JavaFX para elementos de interface gráfica. Foi utilizado JFoenix para algumas componentes de tela.
